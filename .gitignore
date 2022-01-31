@@ -1,0 +1,13 @@
+/nbproject/private/
+/build/
+/dist/
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*

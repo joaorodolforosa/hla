@@ -1,0 +1,66 @@
+DEBUG [main] portico.lrc: Creating new LRC
+DEBUG [main] portico.lrc: Portico version: 2.1.0 (build 3)
+DEBUG [main] portico.lrc: Interface: IEEE1516e
+TRACE [main] portico.lrc: Provided connection implementation is "org.portico.bindings.jgroups.JGroupsConnection"
+TRACE [main] portico.lrc: Trying to load connection class: org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: ATTEMPT create IConnection, class= class org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: SUCCESS created IConnection, class= class org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: Applying modules using component keyword: lrc1516e
+TRACE [main] portico.lrc: STARTING Apply module [lrc13-callback] to LRC
+TRACE [main] portico.lrc: Applied [0/24] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc1516-callback] to LRC
+TRACE [main] portico.lrc: Applied [0/11] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc1516e-callback] to LRC
+TRACE [main] portico.lrc: Applied [24/24] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc-base] to LRC
+TRACE [main] portico.lrc: Applied [82/92] handlers
+DEBUG [main] portico.lrc: Messaging framework configuration complete
+INFO  [main] portico.lrc: LRC initialized (HLA version: IEEE1516e)
+INFO  [main] portico.lrc: Opening LRC Connection
+INFO  [main] portico.lrc.jgroups: jgroups connection is up and running
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Starting immediate callback delivery processor
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/home/jrosa/NetBeansProjects/PORTICO_HLAPerformance_14DEZ17512021/PerformanceEvaluationDSRT20.xml
+DEBUG [main] portico.lrc: ATTEMPT Create federation execution [Unifesp]
+TRACE [main] portico.lrc.jgroups: ATTEMPT Connecting to channel [Unifesp]
+DEBUG [main] portico.lrc.jgroups: SUCCESS Connected to channel [Unifesp]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Unifesp, size=0, source=localhost-54440
+DEBUG [Regular] portico.lrc.jgroups: (GMS) findCoordinator(localhost-54440)
+INFO  [main] portico.lrc.jgroups: No co-ordinator found - appointing myself!
+DEBUG [main] portico.lrc.jgroups: REQUEST createFederation: name=Unifesp
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Unifesp, size=4986, source=localhost-54440
+DEBUG [Regular] portico.lrc.jgroups: (GMS) createFederation(localhost-54440)
+DEBUG [Regular] portico.lrc.jgroups: Received federation creation notification: federation=Unifesp, fomSize=4986b, source=34cb2bd6-8b09-4815-9947-f879fce3fcd9
+INFO  [Regular] portico.lrc.jgroups: Federation [Unifesp] has been created
+INFO  [main] portico.lrc.jgroups: SUCCESS createFederation: name=Unifesp
+INFO  [main] portico.lrc: SUCCESS Created federation execution [Unifesp]
+DEBUG [main] portico.lrc: ATTEMPT Join federate [Simulador] to federation [Unifesp]
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/home/jrosa/NetBeansProjects/PORTICO_HLAPerformance_14DEZ17512021/PerformanceEvaluationDSRT20.xml
+DEBUG [main] portico.lrc: Parsed [1] additional FOM modules
+DEBUG [main] portico.lrc.jgroups: Validate that [1] modules can merge successfully with the existing FOM
+TRACE [main] portico.lrc.merger: Beginning merge of 2 FOM models
+TRACE [main] portico.lrc.merger: Merging [file:/home/jrosa/NetBeansProjects/PORTICO_HLAPerformance_14DEZ17512021/PerformanceEvaluationDSRT20.xml] into combined FOM
+DEBUG [main] portico.lrc.jgroups: Modules can be merged successfully, continue with join
+DEBUG [main] portico.lrc.jgroups: REQUEST joinFederation: federate=Simulador, federation=Unifesp
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Unifesp, size=9, source=localhost-54440
+DEBUG [Regular] portico.lrc.jgroups: (GMS) joinFederation(localhost-54440)
+DEBUG [Regular] portico.lrc.jgroups: Received federate join notification: federate=Simulador, federation=Unifesp, source=34cb2bd6-8b09-4815-9947-f879fce3fcd9
+INFO  [Regular] portico.lrc.jgroups: Federate [Simulador] joined federation [Unifesp]
+INFO  [main] portico.lrc.jgroups: SUCCESS Joined federation with name=Simulador
+DEBUG [main] portico.lrc.jgroups: Merging 1 additional FOM modules that we receive with join request
+TRACE [main] portico.lrc.merger: Beginning merge of 2 FOM models
+TRACE [main] portico.lrc.merger: Merging [file:/home/jrosa/NetBeansProjects/PORTICO_HLAPerformance_14DEZ17512021/PerformanceEvaluationDSRT20.xml] into combined FOM
+TRACE [main] portico.lrc: Created Mom.Federation object, added to Repository (undiscovered)
+TRACE [main] portico.lrc: Created Mom.Federate(Simulador), queued discovery notification
+TRACE [main] portico.lrc: joined federation, waiting for RoleCalls from [1]
+INFO  [main] portico.lrc: SUCCESS Joined federate [Simulador] to federation [Unifesp]: handle=1
+TRACE [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received MOM object discovery for federate [MOM.Federate(Simulador)]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=1
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Unifesp, size=2746, source=localhost-54440
+DEBUG [main] portico.lrc: REQUEST Time advance request for [Simulador] to [60.0]
+INFO  [main] portico.lrc: PENDING Requested time advance for [Simulador] to [60.0], waiting for grant...
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Unifesp, size=243, source=localhost-54440
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Simulador] requests ADVANCE to time [60.0]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ADVANCE (QUEUED) time-advance grant for federate [Simulador] to time [60.0]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ADVANCE (GRANTED) for federate [Simulador] to time [60.0]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK timeAdvanceGrant(time=60.0)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          timeAdvanceGrant() callback complete
